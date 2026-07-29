@@ -1,0 +1,41 @@
+{
+  "name": "phase-net",
+  "version": "1.0.0",
+  "description": "Offline-first project management tool that doubles as a professional network.",
+  "homepage": "https://github.com/mrtnstl/phase-net#readme",
+  "bugs": {
+    "url": "https://github.com/mrtnstl/phase-net/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrtnstl/phase-net.git"
+  },
+  "license": "ISC",
+  "author": "Márton Spiteller",
+  "private": true,
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "workspaces":[
+    "desktop/*",
+    "web/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:desktop":"cd ./desktop && wails dev -tags webkit2_41",
+    "dev:web":"cd ./web && npm run dev",
+    "dev:ui":"npm -w packages/ui run dev",
+    "test:desktop": "echo \"Error: no command specified\" && exit 1",
+    "test:web": "echo \"Error: no command specified\" && exit 1",
+    "test:ui": "npm -w packages/ui run test",
+    "lint:desktop":"echo \"Error: no command specified\" && exit 1",
+    "lint:web":"cd ./web && npm run lint",
+    "lint:ui":"npm -w packages/ui run lint",
+    "build:desktop":"cd ./desktop && wails build -tags webkit2_41",
+    "build:web":"cd ./web && npm run build",
+    "build:ui":"npm -w packages/ui run build"
+  },
+  "devDependencies": {}
+}
