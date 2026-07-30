@@ -41,8 +41,10 @@ Projects(
     name String
     description String          // optional field
     state String(enum)          // eg. active, closed
-    customer_id String          // FK
-    billing_type String(enum)   // eg. project_based, hourly, task_based
+    customer_id String          // FK, optional field
+    customer_name String        // optional field, denormalized
+    rate_type String(enum)      // eg. project_based, hourly, task_based
+    rate_amount                 // optional field, if not set users default rate is used by the application
     current_phase String        // phase name denormalized
     created_at Date
     updated_at Date
@@ -53,6 +55,7 @@ Phases(
     id Number           // PK
     project_id String   // FK
     name String
+    is_done Boolean
     created_at Date
     updated_at Date
 )
@@ -62,6 +65,7 @@ Tasks(
     id Number               // PK
     phase_id Number         // FK
     name String
+    is_done Boolean
     description String      // optional field
     duration Number         // elapsed time in seconds
     created_at Date
@@ -71,8 +75,8 @@ Tasks(
 ```js
 Customers(
     id String               // PK
-    company_name String     // company or individual name
-    rep_name String         // optional
+    customer_name String    // company or individual name
+    rep_name String         // optional field, if the customer is a company with a representative
     phone String
     email String
     website String          // optional
@@ -81,7 +85,17 @@ Customers(
     deleted_at Date         // soft deletions for auditability
 )
 ```
-
+```js
+Expenses(
+    id Number               // PK
+    project_id String       // FK
+    name String
+    currency_id Number      // FK
+    amount Number           // smallest unit of the set currency
+    created_at Date
+    updated_at Date
+)
+```
 ### Entity Relationship Diagram(crow's foot notation):
 
 ![erd](erd.png)

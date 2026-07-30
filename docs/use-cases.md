@@ -2,6 +2,14 @@
 
 List of all the basic use cases.
 
+### Roles:
+
+* visitor: person without a registration
+
+* user: person with registration
+
+
+
 |who|what|why|offline|online|
 |---|----|---|----------|------|
 |visitors|can create projects|so their tasks can be organized|x|x|
