@@ -6,7 +6,12 @@
     "emitDeclarationOnly": true,
     "outDir": "dist",
     "jsx": "react-jsx",
-    "rootDir": "src"
+    "rootDir": "src",
+    "ignoreDeprecations": "6.0",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }

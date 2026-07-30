@@ -1,13 +1,13 @@
-import './App.css'
-import { Dummy } from '@phase-net/ui'
+import { Dummy, DummyButton } from '@phase-net/ui'
 
 function App() {
   return (
     <>
-      <section id="center">
+      <section id="center" className='bg-blue-900'>
         <Dummy onClick={()=>alert("dumeee")}>
           <p>Some dummy component</p>
         </Dummy>
+        <DummyButton />
       </section>
     </>
   )

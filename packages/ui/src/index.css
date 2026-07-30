@@ -3,29 +3,9 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/nunito-sans";
 @import "@fontsource-variable/jetbrains-mono";
-/*---break---*/
+
 @custom-variant dark (&:is(.dark *));
 
-body {
-    /*font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;*/
-}
-
-@font-face {
-    font-family: "Nunito";
-    font-style: normal;
-    font-weight: 400;
-    src: local(""),
-        url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
-}
-
-#app {
-    /*height: 100vh;
-    text-align: center;
-    */
-}
-/*---break---*/
 :root {
     --background: oklch(1 0 0);
     --foreground: oklch(0.148 0.004 228.8);
@@ -60,7 +40,7 @@ body {
     --sidebar-border: oklch(0.925 0.005 214.3);
     --sidebar-ring: oklch(0.723 0.014 214.4);
 }
-/*---break---*/
+
 .dark {
     --background: oklch(0.148 0.004 228.8);
     --foreground: oklch(0.987 0.002 197.1);
@@ -94,7 +74,7 @@ body {
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.56 0.021 213.5);
 }
-/*---break---*/
+
 @theme inline {
     --font-sans: 'Nunito Sans Variable', sans-serif;
     --font-heading: 'JetBrains Mono Variable', monospace;
@@ -137,7 +117,7 @@ body {
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
 }
-/*---break---*/
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

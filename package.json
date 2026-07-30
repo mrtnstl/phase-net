@@ -19,7 +19,7 @@
   },
   "workspaces":[
     "desktop/*",
-    "web/*",
+    "web/",
     "services/*",
     "packages/*"
   ],

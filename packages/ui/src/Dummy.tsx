@@ -7,6 +7,7 @@ interface DummyProps {
 
 export function Dummy({children, onClick}: DummyProps){
     return <button onClick={onClick}>
+    <small>UIUIUI</small>
         {
             children
         }
