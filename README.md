@@ -22,9 +22,14 @@ services/               # Backend services
 web/                    # The web version (React SPA)
 ```
 
+### Docs
+
+* Use cases in [docs/use-cases.md](./docs/use-cases.md)
+* Notes on data models in [docs/data-models.md](./docs/data-models.md)
+
 ### Build and run
 
-Each version depends on the `packages` module, so it needs to be built before one of the specific distribution.
+Each version depends on the `ui` module in the packages directory, so it needs to be built before any of the specific distribution.
 
 ```bash
 npm run build:ui    # there are scripts for linting and testing in the root package.json
