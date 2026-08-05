@@ -26,6 +26,7 @@ web/                    # The web version (React SPA)
 
 * Use cases in [docs/use-cases.md](./docs/use-cases.md)
 * Notes on data models in [docs/data-models.md](./docs/data-models.md)
+* Architecture decisions in [docs/architecture.md](./docs/architecture.md)
 
 ### Build and run
 
